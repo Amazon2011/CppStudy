@@ -1,4 +1,3 @@
 ﻿  ConsoleApplication1.cpp
-ConsoleApplication1.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
   ConsoleApplication1.vcxproj -> D:\study\github\CppStudy\ConsoleApplication1\Debug\ConsoleApplication1.exe
   ConsoleApplication1.vcxproj -> D:\study\github\CppStudy\ConsoleApplication1\Debug\ConsoleApplication1.pdb (Full PDB)

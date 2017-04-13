@@ -4,8 +4,15 @@
 #include "stdafx.h"
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Sales_item.h"
 #include "Sales_data.h"
+
+using std::cin;
+using std::cout;
+using std::endl;
+using std::string;
+using std::vector;
 
 int main()
 {
@@ -102,7 +109,7 @@ int main()
     auto j = 1;
 
     std::cout << "i + j = " << i + j << std::endl;*/
-    Sales_data data1, data2;
+    /*Sales_data data1, data2;
     double price = 0;
     std::cin >> data1.bookNo >> data1.units_sold >> price;
     data1.revenue = data1.units_sold * price;
@@ -124,7 +131,28 @@ int main()
     {
         std::cerr << "Data must refer to the same ISBN" << std::endl;
         return -1;
+    }*/
+
+    /*string s;
+    cin >> s;
+    cout << s << "size =" << s.size() << endl;*/
+    /*string s("afasfijasfj,!.?");
+    decltype(s.size()) punct_cnt = 0;
+    for (auto c : s)
+        if (ispunct(c))
+            ++punct_cnt;
+    cout << "punct count = " << punct_cnt << endl;
+
+    for (auto &c : s)
+        c = 'X';// toupper(c);
+    cout << "upper string = " << s << endl;*/
+    /*string s = "abcdef";
+    for (auto &c : s) {
+        c = 'X';
     }
+    cout << "upper string = " << s << endl;*/
+    vector<string> strs{ 10 };
+    cout << strs.size() << endl;
 
     return 0;
 }
