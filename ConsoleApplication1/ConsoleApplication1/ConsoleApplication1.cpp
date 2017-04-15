@@ -151,8 +151,53 @@ int main()
         c = 'X';
     }
     cout << "upper string = " << s << endl;*/
-    vector<string> strs{ 10 };
-    cout << strs.size() << endl;
+    //vector<string> strs{ 10 };
+    //cout << strs.size() << endl;
+
+    /*string s = "abcdef";
+    for (auto it = s.begin(); it != s.end() && !isspace(*it); ++it) {
+        *it = toupper(*it);
+    }
+    cout << s << endl;*/
+
+    //vector<int> ivec{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    /*for (auto it = ivec.begin(); it != ivec.end(); ++it) {
+        *it *= 2;
+    }
+
+    for (int i : ivec) {
+        cout << i << endl;
+    }*/
+    /*for (auto it = ivec.begin(); it + 1 != ivec.end(); ++it) {
+        cout << *it + *(it + 1) << endl;
+    }*/
+    /*auto begin = ivec.begin();
+    auto end = ivec.end();
+    for (auto i = 0; begin + i <= end - i - 1; ++i) {
+        cout << *(begin + i) + *(end - i - 1) << endl;
+    }*/
+    int iarr[10] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    /*int(*parray)[10] = &iarr;
+    int(&arrRef)[10] = iarr;
+    int iarr2[5 + 4];*/
+    /*for (size_t i = 0; i != 10; ++i) {
+        cout << i << endl;
+        iarr[i] = i;
+    }*/
+    /*int *e = &iarr[10];
+    for (int *p = iarr; p != e; ++p) {
+        *p = 1;
+    }
+
+    for (auto i : iarr) {
+        cout << i << endl;
+    }*/
+    int *pbeg = std::begin(iarr);
+    int *pend = std::end(iarr);
+    while (pbeg != pend) {
+        cout << *pbeg << endl;
+        ++pbeg;
+    }
 
     return 0;
 }
