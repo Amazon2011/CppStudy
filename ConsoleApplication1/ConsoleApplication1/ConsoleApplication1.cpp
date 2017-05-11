@@ -7,12 +7,27 @@
 #include <vector>
 #include "Sales_item.h"
 #include "Sales_data.h"
+#include "Chapter6.h"
+#include <forward_list>
+#include <list>
+#include <iterator>
 
 using std::cin;
 using std::cout;
 using std::endl;
 using std::string;
 using std::vector;
+using std::forward_list;
+using std::list;
+using std::copy;
+using std::inserter;
+
+
+size_t count_calls()
+{
+    static size_t ctr = 0;
+    return ++ctr;
+}
 
 int main()
 {
@@ -176,7 +191,7 @@ int main()
     for (auto i = 0; begin + i <= end - i - 1; ++i) {
         cout << *(begin + i) + *(end - i - 1) << endl;
     }*/
-    int iarr[10] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    //int iarr[10] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     /*int(*parray)[10] = &iarr;
     int(&arrRef)[10] = iarr;
     int iarr2[5 + 4];*/
@@ -192,12 +207,66 @@ int main()
     for (auto i : iarr) {
         cout << i << endl;
     }*/
-    int *pbeg = std::begin(iarr);
+    /*int *pbeg = std::begin(iarr);
     int *pend = std::end(iarr);
     while (pbeg != pend) {
         cout << *pbeg << endl;
         ++pbeg;
+    }*/
+    /*int *p = &iarr[5];
+    cout << p[2] << endl;
+    cout << p[-2] << endl;*/
+
+    /*vector<int> ivec{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    int *iarr = &ivec[0];
+    cout << iarr[1] << endl;*/
+    /*bool a = 1;
+    bool b = -1;
+    cout << a + b << endl;*/
+    //int n = 5;
+    //cout << n << "! is: " << fact(n) << endl;
+    //for (size_t i = 0; i != 10; ++i)
+    //cout << count_calls() << endl;
+
+    /*string str("aaabbb.");
+    char c = 'b';
+    string::size_type occurs = 0;
+    string::size_type firstOccurIndex = find_char(str, c, occurs);
+
+    cout << "firstOccurIndex = " << firstOccurIndex << " occurs = " << occurs << " isSentence = " << is_sentence(str) << endl;*/
+    //const int i = 0;
+    //const int &r = i;
+    /*string str1("abcdef");
+    string str2("abcde");
+
+    cout << "The sum of the lengths of str1 and str2 is " << getFunc("sumLength")(str1, str2) << ". The larger length of str1 and str2 is " << getFunc("largerLength")(str1, str2) << endl;*/
+
+    //cout << "isShorter = " << isShorter(str1, str2) << endl;
+
+    /*forward_list<int> flst = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    auto prev = flst.before_begin();
+    auto curr = flst.begin();
+    while (curr != flst.end())
+    {
+        if (*curr % 2)
+            curr = flst.erase_after(prev);
+        else
+        {
+            prev = curr;
+            ++curr;
+        }
     }
+
+    for (auto p = flst.begin(); p != flst.end(); ++p)
+        cout << *p << endl;*/
+
+    list<int> lst = { 1, 2, 3, 4};
+    list<int> lst2;
+
+    copy(lst.cbegin(), lst.cend(), inserter(lst2, lst2.begin()));
+
+    for (auto p = lst2.cbegin(); p != lst2.cend(); ++p)
+        cout << *p << endl;
 
     return 0;
 }

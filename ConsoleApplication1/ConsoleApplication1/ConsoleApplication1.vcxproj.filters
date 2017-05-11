@@ -36,12 +36,21 @@
     <ClInclude Include="My_sales_data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Chapter6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleApplication1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="My_sales_data.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
